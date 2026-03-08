@@ -1,0 +1,452 @@
+============================================================
+STEP 1: Downloading corpus
+============================================================
+Fetching 150 issues from facebook/react …
+  Got 150 issues
+  [1/150] #13991 – Hooks + multiple instances of React
+  [2/150] #11347 – RFC: Plan for custom element attributes/properties in React 
+  [3/150] #11940 – Facebook Engineers - Thank You For 2017
+  [4/150] #10294 – React 16 RC
+  [5/150] #13525 – React Fire: Modernizing React DOM
+  [6/150] #20463 – Expose DEV-mode warnings in devtools UI
+  [7/150] #14853 – await act(async () => ...)
+  [8/150] #7311 – Allow custom attributes by default
+  [9/150] #2127 – Add fragment API to allow returning multiple components from
+  [10/150] #10783 – Add Fragment as a named export to React
+  [11/150] #7964 – [New Docs] Added: Lists & Conditional Rendering & Forms
+  [12/150] #1739 – Support asynchronous server rendering (waiting for data befo
+  [13/150] #8784 – Explore encouraging users to not ship DEV mode to production
+  [14/150] #14110 – Provide more ways to bail out inside Hooks
+  [15/150] #7359 – Fix Chrome number input backspace and invalid input issue
+  [16/150] #3398 – Implement Sideways Data Loading
+  [17/150] #11503 – Formalize top-level ES exports
+  [18/150] #11299 – Express more tests via public API
+  [19/150] #140 – Allow custom (nonstandard) attributes.
+  [20/150] #12325 – create-subscription
+  [21/150] #14099 – useCallback() invalidates too often in practice
+  [22/150] #14769 – Unhelpful warning for `act` for react-dom@16.8
+  [23/150] #11387 – createPortal: support option to stop propagation of events i
+  [24/150] #10191 – Consider re-licensing to AL v2.0, as RocksDB has just done
+  [25/150] #2517 – How to implement shouldComponentUpdate with this.context?
+  [26/150] #17355 – "Should not already be working" in Firefox after a breakpoin
+  [27/150] #7127 – Trigger a proper no-op warning for async state changes on se
+  [28/150] #6046 – Add new ReactPerf
+  [29/150] #18000 – useMutableSource hook
+  [30/150] #13206 – [Umbrella] Releasing Suspense
+  [31/150] #8663 – Facebook Engineers - Thank You For 2016
+  [32/150] #22184 – Add custom element property support behind a flag
+  [33/150] #12279 – Suspense
+  [34/150] #14920 – [ESLint] Feedback for 'exhaustive-deps' lint rule
+  [35/150] #7961 – [New Docs] Update Addon reference docs.
+  [36/150] #8854 – React 16 Umbrella ☂️ (and 15.5)
+  [37/150] #18178 – Bug: too hard to fix "Cannot update a component from inside 
+  [38/150] #7896 – Add "Rendering Elements", "Components and Props", "State and
+  [39/150] #28313 – eslint-plugin-react-hooks & "Flat Config" (ESLint 9)
+  [40/150] #13509 – Interaction tracking follow up
+  [41/150] #10385 – Custom Attributes Scenario 2: Write badly cased attributes. 
+  [42/150] #1657 – Missing SVG tags and attributes
+  [43/150] #25437 – [ServerRenderer] Add option to send instructions as data att
+  [44/150] #14585 – RFC: warn when returning different hooks on subsequent rende
+  [45/150] #11734 – value|defaultValue={Symbol|Function} should be ignored, not 
+  [46/150] #12898 – The minor release of 16.4 causes BREAKING changes in getDeri
+  [47/150] #8628 – Fiber test renderer
+  [48/150] #25769 – [DevTools Bug] Element "9" not found | Also "Element "10" no
+  [49/150] #11538 – Make React resilient to DOM mutations from Google Translate
+  [50/150] #6618 – Validate server markup against the DOM rather than string ch
+  [51/150] #1510 – Use removeAttribute to forcefully remove properties from the
+  [52/150] #12629 – Use browser event names for top-level event types in React D
+  [53/150] #6914 – Add React.PureComponent, inherit purity for functional compo
+  [54/150] #29034 – [React 19] allow opting out of automatic form reset when For
+  [55/150] #12745 – Add ProfileRoot component for collecting new time metrics
+  [56/150] #6406 – Properly set value and defaultValue for input and textarea
+  [57/150] #3279 – componentDidReceiveProps Please
+  [58/150] #16604 – How should we set up apps for HMR now that Fast Refresh repl
+  [59/150] #22577 – [DevTools Bug]: Blank tools localhost only
+  [60/150] #10389 – <video /> attribute needed but not guaranteed by React
+  [61/150] #7878 – JSX Docs: JSX In Depth and React Without JSX
+  [62/150] #24430 – Bug: Hydration mismatch error due to plugins generating scri
+  [63/150] #10353 – Cross-origin error handling in DEV
+  [64/150] #7869 – Doc on higher-order components
+  [65/150] #1159 – Provide a way to handle browser-autocompleted form values on
+  [66/150] #22723 – Adding new Performance Insight feature to React devtools
+  [67/150] #8589 – Add basic testing page for browser quicks
+  [68/150] #12063 – DOM diff and component stack in SSR hydrate mismatch warning
+  [69/150] #2461 – Error boundaries: Recover from errors thrown in `render`
+  [70/150] #462 – #381 - listen to events on demand
+  [71/150] #16157 – Add trusted types to react on client side
+  [72/150] #12037 – Minimally support iframes (nested browsing contexts) in sele
+  [73/150] #7649 – Implement createNodeMock for ReactTestRenderer
+  [74/150] #22030 – Console Logging for StrictMode Double Rendering
+  [75/150] #15865 – React Hook useEffect has a missing dependency: 'xxx' ?
+  [76/150] #759 – TypeScript support for JSX
+  [77/150] #25243 – [Fizz/Float] Float for stylesheet resources
+  [78/150] #23244 – [ServerContext] Flight support for ServerContext
+  [79/150] #13234 – interaction-tracking package
+  [80/150] #9333 – Fix wheel/touch browser locking in IE and Safari
+  [81/150] #7671 – Deprecate componentWillMount Maybe?
+  [82/150] #19590 – [eslint-plugin-react-hooks] Report constant constructions
+  [83/150] #17322 – Add useOpaqueIdentifier Hook
+  [84/150] #13397 – Accept promise as element type
+  [85/150] #9426 – Shallow renderer and test utils bundles
+  [86/150] #15317 – [Concurrent] Safely disposing uncommitted objects
+  [87/150] #9519 – [Docs: A11y] Add accessibility docs
+  [88/150] #26446 – Generate sourcemaps for production build artifacts
+  [89/150] #19374 – Effects list refactor continued: passive effects traversal
+  [90/150] #19523 – Double Invoke Effects in __DEV__
+  [91/150] #16432 – Babel Transform JSX to React.jsx/React.jsxDEV Plugin
+  [92/150] #15619 – [Fresh] Set up initial scaffolding
+  [93/150] #10741 – Add doc about Render Props
+  [94/150] #20417 – Bug: MobX-like observer pattern doesn't work with Fast Refre
+  [95/150] #15022 – useSubscription hook
+  [96/150] #13253 – Profiler integration with interaction-tracking package
+  [97/150] #5940 – Add warning when reading from event which has been returned 
+  [98/150] #1881 – Support !important for styles?
+  [99/150] #7962 – [New Docs] Reconciliation and Web Components docs
+  [100/150] #2686 – Error reporting in production
+  [101/150] #15315 – Invalid hook call. Hooks can only be called inside of the bo
+  [102/150] #11818 – New context API
+  [103/150] #16873 – [eslint-plugin-react-hooks] allow configuring custom hooks a
+  [104/150] #19121 – Decouple update priority tracking from Scheduler package
+  [105/150] #11223 – Release script
+  [106/150] #10758 – React Reconciler Package
+  [107/150] #3985 – Enable linting for __tests__
+  [108/150] #30894 – [compiler][rewrite] PropagateScopeDeps hir rewrite
+  [109/150] #18796 – Initial Lanes implementation
+  [110/150] #15037 – Update Rollup version to 1.19.4 and fix breaking changes
+  [111/150] #10509 – Moar attribute tests
+  [112/150] #17934 – Add Component Highlighting to Profiler DevTools
+  [113/150] #16265 – Warning for 'exhaustive-deps' keeps asking for the full 'pro
+  [114/150] #14744 – expose `TestUtils.act()` for batching actions in tests
+  [115/150] #10824 – Doc updates for React 16 + blog post
+  [116/150] #22510 – Initial implementation of cache cleanup
+  [117/150] #20890 – [Experiment] Lazily propagate context changes
+  [118/150] #7901 – Bypass synthetic event system for Web Component events
+  [119/150] #3009 – Streaming renderToStaticMarkup
+  [120/150] #2533 – Textarea does not respond to the value property changing to 
+  [121/150] #760 – Support for JSX tag namespaces <React:DOM:div />
+  [122/150] #17651 – [react-interactions] Add Listener API + useEvent hook
+  [123/150] #9316 – Add guide on integrating with non-react code
+  [124/150] #8848 – Add a guide on routing
+  [125/150] #30774 – feat(eslint-plugin-react-hooks): support flat config
+  [126/150] #14927 – useLayoutEffect in ssr
+  [127/150] #11333 – Use only public API for ChangeEventPlugin-test.js
+  [128/150] #10564 – Changes to attribute whitelist logic
+  [129/150] #7240 – "Missing React element for debugID" warning when testing com
+  [130/150] #7132 – Warn if PropType function is called manually
+  [131/150] #6436 – Support Passive Event Listeners
+  [132/150] #11713 – Rewrite ReactBrowserEventEmitter-test
+  [133/150] #6472 – React 15.0.1 Updates causing issues with DOM
+  [134/150] #4933 – className prop not working with custom DOM elements in 0.14.
+  [135/150] #19634 – Import React Concurrent Mode Profiler
+  [136/150] #15036 – Add infrastructure for passive/non-passive event support for
+  [137/150] #8646 – Renderers can queue commit effects for initial mount
+  [138/150] #6410 – onFocusIn/onFocusOut events
+  [139/150] #2402 – Warn when two versions of React are used alongside
+  [140/150] #579 – Add 'onClickoutside' event
+  [141/150] #285 – Declarative API for installing global DOM event handlers
+  [142/150] #15157 – Clean up unmounted fiber references for GC
+  [143/150] #14208 – react@16.6.2 No matching version found for scheduler@^16.6.2
+  [144/150] #10441 – Cross-origin error passed to componentDidCatch incorrectly
+  [145/150] #8127 – [Fiber] Use synchronous scheduling by default
+  [146/150] #6398 –  Fix for #6062 : Show source line number on unknown property
+  [147/150] #5753 – Don't wrap text in <span> elements
+  [148/150] #812 – Server rendering is slower with npm react
+  [149/150] #20456 – Add built-in Suspense cache with support for invalidation (r
+  [150/150] #13394 – Properly warn on Symbol/Function in SSR, eliminate defaultVa
+Corpus saved to /mnt/c/Users/ADISH GUPTA/Desktop/Layer10/outputs/corpus.json
+  Corpus: 150 issues from facebook/react
+
+============================================================
+STEP 2: Running extraction
+============================================================
+  [1/150] #13991: Hooks + multiple instances of React
+  [2/150] #11347: RFC: Plan for custom element attributes/properties
+  [3/150] #11940: Facebook Engineers - Thank You For 2017
+  [4/150] #10294: React 16 RC
+  [5/150] #13525: React Fire: Modernizing React DOM
+  [6/150] #20463: Expose DEV-mode warnings in devtools UI
+  [7/150] #14853: await act(async () => ...)
+  [8/150] #7311: Allow custom attributes by default
+  [9/150] #2127: Add fragment API to allow returning multiple compo
+  [10/150] #10783: Add Fragment as a named export to React
+  [11/150] #7964: [New Docs] Added: Lists & Conditional Rendering & 
+  [12/150] #1739: Support asynchronous server rendering (waiting for
+  [13/150] #8784: Explore encouraging users to not ship DEV mode to 
+  [14/150] #14110: Provide more ways to bail out inside Hooks
+  [15/150] #7359: Fix Chrome number input backspace and invalid inpu
+  [16/150] #3398: Implement Sideways Data Loading
+  [17/150] #11503: Formalize top-level ES exports
+  [18/150] #11299: Express more tests via public API
+  [19/150] #140: Allow custom (nonstandard) attributes.
+  [20/150] #12325: create-subscription
+  [21/150] #14099: useCallback() invalidates too often in practice
+  [22/150] #14769: Unhelpful warning for `act` for react-dom@16.8
+  [23/150] #11387: createPortal: support option to stop propagation o
+  [24/150] #10191: Consider re-licensing to AL v2.0, as RocksDB has j
+  [25/150] #2517: How to implement shouldComponentUpdate with this.c
+  [26/150] #17355: "Should not already be working" in Firefox after a
+  [27/150] #7127: Trigger a proper no-op warning for async state cha
+  [28/150] #6046: Add new ReactPerf
+  [29/150] #18000: useMutableSource hook
+  [30/150] #13206: [Umbrella] Releasing Suspense
+  [31/150] #8663: Facebook Engineers - Thank You For 2016
+  [32/150] #22184: Add custom element property support behind a flag
+  [33/150] #12279: Suspense
+  [34/150] #14920: [ESLint] Feedback for 'exhaustive-deps' lint rule
+  [35/150] #7961: [New Docs] Update Addon reference docs.
+  [36/150] #8854: React 16 Umbrella ☂️ (and 15.5)
+  [37/150] #18178: Bug: too hard to fix "Cannot update a component fr
+  [38/150] #7896: Add "Rendering Elements", "Components and Props", 
+  [39/150] #28313: eslint-plugin-react-hooks & "Flat Config" (ESLint 
+  [40/150] #13509: Interaction tracking follow up
+  [41/150] #10385: Custom Attributes Scenario 2: Write badly cased at
+  [42/150] #1657: Missing SVG tags and attributes
+  [43/150] #25437: [ServerRenderer] Add option to send instructions a
+  [44/150] #14585: RFC: warn when returning different hooks on subseq
+  [45/150] #11734: value|defaultValue={Symbol|Function} should be ign
+  [46/150] #12898: The minor release of 16.4 causes BREAKING changes 
+  [47/150] #8628: Fiber test renderer
+  [48/150] #25769: [DevTools Bug] Element "9" not found | Also "Eleme
+  [49/150] #11538: Make React resilient to DOM mutations from Google 
+  [50/150] #6618: Validate server markup against the DOM rather than
+  [51/150] #1510: Use removeAttribute to forcefully remove propertie
+  [52/150] #12629: Use browser event names for top-level event types 
+  [53/150] #6914: Add React.PureComponent, inherit purity for functi
+  [54/150] #29034: [React 19] allow opting out of automatic form rese
+  [55/150] #12745: Add ProfileRoot component for collecting new time 
+  [56/150] #6406: Properly set value and defaultValue for input and 
+  [57/150] #3279: componentDidReceiveProps Please
+  [58/150] #16604: How should we set up apps for HMR now that Fast Re
+  [59/150] #22577: [DevTools Bug]: Blank tools localhost only
+  [60/150] #10389: <video /> attribute needed but not guaranteed by R
+  [61/150] #7878: JSX Docs: JSX In Depth and React Without JSX
+  [62/150] #24430: Bug: Hydration mismatch error due to plugins gener
+  [63/150] #10353: Cross-origin error handling in DEV
+  [64/150] #7869: Doc on higher-order components
+  [65/150] #1159: Provide a way to handle browser-autocompleted form
+  [66/150] #22723: Adding new Performance Insight feature to React de
+  [67/150] #8589: Add basic testing page for browser quicks
+  [68/150] #12063: DOM diff and component stack in SSR hydrate mismat
+  [69/150] #2461: Error boundaries: Recover from errors thrown in `r
+  [70/150] #462: #381 - listen to events on demand
+  [71/150] #16157: Add trusted types to react on client side
+  [72/150] #12037: Minimally support iframes (nested browsing context
+  [73/150] #7649: Implement createNodeMock for ReactTestRenderer
+  [74/150] #22030: Console Logging for StrictMode Double Rendering
+  [75/150] #15865: React Hook useEffect has a missing dependency: 'xx
+  [76/150] #759: TypeScript support for JSX
+  [77/150] #25243: [Fizz/Float] Float for stylesheet resources
+  [78/150] #23244: [ServerContext] Flight support for ServerContext
+  [79/150] #13234: interaction-tracking package
+  [80/150] #9333: Fix wheel/touch browser locking in IE and Safari
+  [81/150] #7671: Deprecate componentWillMount Maybe?
+  [82/150] #19590: [eslint-plugin-react-hooks] Report constant constr
+  [83/150] #17322: Add useOpaqueIdentifier Hook
+  [84/150] #13397: Accept promise as element type
+  [85/150] #9426: Shallow renderer and test utils bundles
+  [86/150] #15317: [Concurrent] Safely disposing uncommitted objects
+  [87/150] #9519: [Docs: A11y] Add accessibility docs
+  [88/150] #26446: Generate sourcemaps for production build artifacts
+  [89/150] #19374: Effects list refactor continued: passive effects t
+  [90/150] #19523: Double Invoke Effects in __DEV__
+  [91/150] #16432: Babel Transform JSX to React.jsx/React.jsxDEV Plug
+  [92/150] #15619: [Fresh] Set up initial scaffolding
+  [93/150] #10741: Add doc about Render Props
+  [94/150] #20417: Bug: MobX-like observer pattern doesn't work with 
+  [95/150] #15022: useSubscription hook
+  [96/150] #13253: Profiler integration with interaction-tracking pac
+  [97/150] #5940: Add warning when reading from event which has been
+  [98/150] #1881: Support !important for styles?
+  [99/150] #7962: [New Docs] Reconciliation and Web Components docs
+  [100/150] #2686: Error reporting in production
+  [101/150] #15315: Invalid hook call. Hooks can only be called inside
+  [102/150] #11818: New context API
+  [103/150] #16873: [eslint-plugin-react-hooks] allow configuring cust
+  [104/150] #19121: Decouple update priority tracking from Scheduler p
+  [105/150] #11223: Release script
+  [106/150] #10758: React Reconciler Package
+  [107/150] #3985: Enable linting for __tests__
+  [108/150] #30894: [compiler][rewrite] PropagateScopeDeps hir rewrite
+  [109/150] #18796: Initial Lanes implementation
+  [110/150] #15037: Update Rollup version to 1.19.4 and fix breaking c
+  [111/150] #10509: Moar attribute tests
+  [112/150] #17934: Add Component Highlighting to Profiler DevTools
+  [113/150] #16265: Warning for 'exhaustive-deps' keeps asking for the
+  [114/150] #14744: expose `TestUtils.act()` for batching actions in t
+  [115/150] #10824: Doc updates for React 16 + blog post
+  [116/150] #22510: Initial implementation of cache cleanup
+  [117/150] #20890: [Experiment] Lazily propagate context changes
+  [118/150] #7901: Bypass synthetic event system for Web Component ev
+  [119/150] #3009: Streaming renderToStaticMarkup
+  [120/150] #2533: Textarea does not respond to the value property ch
+  [121/150] #760: Support for JSX tag namespaces <React:DOM:div />
+  [122/150] #17651: [react-interactions] Add Listener API + useEvent h
+  [123/150] #9316: Add guide on integrating with non-react code
+  [124/150] #8848: Add a guide on routing
+  [125/150] #30774: feat(eslint-plugin-react-hooks): support flat conf
+  [126/150] #14927: useLayoutEffect in ssr
+  [127/150] #11333: Use only public API for ChangeEventPlugin-test.js
+  [128/150] #10564: Changes to attribute whitelist logic
+  [129/150] #7240: "Missing React element for debugID" warning when t
+  [130/150] #7132: Warn if PropType function is called manually
+  [131/150] #6436: Support Passive Event Listeners
+  [132/150] #11713: Rewrite ReactBrowserEventEmitter-test
+  [133/150] #6472: React 15.0.1 Updates causing issues with DOM
+  [134/150] #4933: className prop not working with custom DOM element
+  [135/150] #19634: Import React Concurrent Mode Profiler
+  [136/150] #15036: Add infrastructure for passive/non-passive event s
+  [137/150] #8646: Renderers can queue commit effects for initial mou
+  [138/150] #6410: onFocusIn/onFocusOut events
+  [139/150] #2402: Warn when two versions of React are used alongside
+  [140/150] #579: Add 'onClickoutside' event
+  [141/150] #285: Declarative API for installing global DOM event ha
+  [142/150] #15157: Clean up unmounted fiber references for GC
+  [143/150] #14208: react@16.6.2 No matching version found for schedul
+  [144/150] #10441: Cross-origin error passed to componentDidCatch inc
+  [145/150] #8127: [Fiber] Use synchronous scheduling by default
+  [146/150] #6398:  Fix for #6062 : Show source line number on unknow
+  [147/150] #5753: Don't wrap text in <span> elements
+  [148/150] #812: Server rendering is slower with npm react
+  [149/150] #20456: Add built-in Suspense cache with support for inval
+  [150/150] #13394: Properly warn on Symbol/Function in SSR, eliminate
+
+  Raw extraction: 4074 entities, 2215 claims, 12101 evidence
+
+============================================================
+STEP 3: Running deduplication
+============================================================
+  Dedup: 740 merges (454 entity, 286 claim, 0 artifact)
+  After dedup: 3620 entities, 1913 claims, 12101 evidence, 740 merges
+
+============================================================
+STEP 4: Building memory graph
+============================================================
+  Graph stats: {
+  "entities": 1462,
+  "claims": 1910,
+  "evidence": 12101,
+  "merge_log": 740,
+  "canonical_entities": 1462,
+  "current_claims": 1880
+}
+  Entity types: {
+  "issue": 63,
+  "label": 33,
+  "milestone": 9,
+  "person": 692,
+  "pull_request": 87,
+  "repository": 1,
+  "topic": 577
+}
+  Claim types: {
+  "assignment": 35,
+  "authorship": 150,
+  "decision": 41,
+  "labeling": 300,
+  "milestone": 11,
+  "reference": 118,
+  "status_change": 142,
+  "technical_claim": 407,
+  "topic_discussion": 706
+}
+Graph saved to /mnt/c/Users/ADISH GUPTA/Desktop/Layer10/outputs/graph.json
+
+============================================================
+STEP 5: Running example retrievals
+============================================================
+Building retrieval index …
+  Indexed 1462 entities, 1910 claims, 12101 evidence
+
+  Q: What are the most common performance issues?
+Question: What are the most common performance issues?
+
+=== Relevant Entities ===
+  [topic] performance
+  [topic] performance-insights
+  [topic] performance-measurement
+  [topic] react-performance
+  [topic] dom-performance
+
+=== Related Claims ===
+  [CURRENT] reopened_by: reopened (confidence: 1.00, type: status_change)
+  [CURRENT] labeled_with: e4ae8f719b193b5f (confidence: 1.00, type: labeling)
+  [CURRENT] authored: 72370076bbe8f021 (confidence: 1.00, type: authorship)
+  [CURRENT] labeled_with:
+
+  Q: Who are the most active contributors?
+Question: Who are the most active contributors?
+
+=== Relevant Entities ===
+  [issue] #10191: Consider re-licensing to AL v2.0, as RocksDB has just done
+    number: 10191
+    state: closed
+    html_url: https://github.com/facebook/react/issues/10191
+  [issue] #10294: React 16 RC
+    number: 10294
+    state: closed
+    html_url: https://github.com/facebook/react/issues/10294
+  [pull_request] #10353: Cross-origin error handling in DEV
+    number: 10353
+    state: closed
+    html_url: https://github
+
+  Q: What decisions were made about hooks?
+Question: What decisions were made about hooks?
+
+=== Relevant Entities ===
+  [label] Component: Hooks
+    description: 
+  [topic] hooks
+  [topic] react-hooks-context
+  [topic] react hooks
+  [topic] react-hooks
+
+=== Related Claims ===
+  [CURRENT] labeled_with: 5ec85bf72bae79af (confidence: 1.00, type: labeling)
+  [CURRENT] labeled_with: 5ec85bf72bae79af (confidence: 1.00, type: labeling)
+  [CURRENT] labeled_with: 5ec85bf72bae79af (confidence: 1.00, type: labeling)
+  [CURRENT] labeled_with: 786d85
+
+  Q: What bug reports are related to rendering?
+Question: What bug reports are related to rendering?
+
+=== Relevant Entities ===
+  [topic] bug
+  [topic] react-bug
+  [label] Type: Bug
+    description: None
+  [topic] devtools-bug
+  [issue] #1739: Support asynchronous server rendering (waiting for data before rendering)
+    number: 1739
+    state: open
+    html_url: https://github.com/facebook/react/issues/1739
+
+=== Related Claims ===
+  [CURRENT] labeled_with: 793ccdc45af21e06 (confidence: 1.00, type: labeling)
+  [CURRENT] labeled_with: 793ccdc45
+
+  Q: What components have had the most discussion?
+Question: What components have had the most discussion?
+
+=== Relevant Entities ===
+  [label] Type: Discussion
+    description: None
+  [topic] function-components
+  [topic] react-components
+  [topic] web-components
+  [topic] functional-components
+
+=== Related Claims ===
+  [CURRENT] labeled_with: 96b6597ea8d856c2 (confidence: 1.00, type: labeling)
+  [CURRENT] labeled_with: 96b6597ea8d856c2 (confidence: 1.00, type: labeling)
+  [CURRENT] labeled_with: 96b6597ea8d856c2 (confidence: 1.00, type: labeli
+
+  Example context packs saved to /mnt/c/Users/ADISH GUPTA/Desktop/Layer10/outputs/example_context_packs.json
+
+============================================================
+Pipeline complete!
+  Outputs: /mnt/c/Users/ADISH GUPTA/Desktop/Layer10/outputs
+  Database: /mnt/c/Users/ADISH GUPTA/Desktop/Layer10/outputs/memory.db
+  Graph JSON: /mnt/c/Users/ADISH GUPTA/Desktop/Layer10/outputs/graph.json
+  Examples: /mnt/c/Users/ADISH GUPTA/Desktop/Layer10/outputs/example_context_packs.json
+============================================================
