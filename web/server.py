@@ -5,6 +5,8 @@ Serves:
   - REST API for graph exploration and search
 """
 from __future__ import annotations
+import os
+import sys
 import json
 from pathlib import Path
 from typing import Optional
@@ -12,6 +14,7 @@ from fastapi import FastAPI, Query
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse, HTMLResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
+sys.path.append(os.path.dirname(os.path.dirname(__file__)))
 from graph import MemoryGraph
 from retrieval import MemoryRetriever
 from schema import EntityType, ClaimType
