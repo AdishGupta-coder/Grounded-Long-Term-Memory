@@ -1,0 +1,170 @@
+============================================================
+STEP 1: Downloading corpus
+============================================================
+Corpus already exists at /mnt/c/Users/ADISH GUPTA/Desktop/Layer10/outputs/corpus.json, loading …
+  Loaded 20 issues
+  Corpus: 20 issues from facebook/react
+
+============================================================
+STEP 2: Running extraction
+============================================================
+  [1/20] #13991: Hooks + multiple instances of React
+  [2/20] #11347: RFC: Plan for custom element attributes/properties
+  [3/20] #11940: Facebook Engineers - Thank You For 2017
+  [4/20] #10294: React 16 RC
+  [5/20] #13525: React Fire: Modernizing React DOM
+  [6/20] #20463: Expose DEV-mode warnings in devtools UI
+  [7/20] #14853: await act(async () => ...)
+  [8/20] #7311: Allow custom attributes by default
+  [9/20] #2127: Add fragment API to allow returning multiple compo
+  [10/20] #10783: Add Fragment as a named export to React
+  [11/20] #7964: [New Docs] Added: Lists & Conditional Rendering & 
+  [12/20] #1739: Support asynchronous server rendering (waiting for
+  [13/20] #8784: Explore encouraging users to not ship DEV mode to 
+  [14/20] #14110: Provide more ways to bail out inside Hooks
+  [15/20] #7359: Fix Chrome number input backspace and invalid inpu
+  [16/20] #3398: Implement Sideways Data Loading
+  [17/20] #11503: Formalize top-level ES exports
+  [18/20] #11299: Express more tests via public API
+  [19/20] #140: Allow custom (nonstandard) attributes.
+  [20/20] #12325: create-subscription
+
+  Raw extraction: 530 entities, 173 claims, 1988 evidence
+
+============================================================
+STEP 3: Running deduplication
+============================================================
+  Dedup: 92 merges (63 entity, 29 claim, 0 artifact)
+  After dedup: 467 entities, 141 claims, 1988 evidence, 92 merges
+
+============================================================
+STEP 4: Building memory graph
+============================================================
+  Graph stats: {
+  "entities": 216,
+  "claims": 141,
+  "evidence": 1988,
+  "merge_log": 92,
+  "canonical_entities": 216,
+  "current_claims": 138
+}
+  Entity types: {
+  "issue": 13,
+  "label": 16,
+  "milestone": 2,
+  "person": 152,
+  "pull_request": 7,
+  "repository": 1,
+  "topic": 25
+}
+  Claim types: {
+  "assignment": 3,
+  "authorship": 20,
+  "labeling": 39,
+  "milestone": 2,
+  "reference": 14,
+  "status_change": 10,
+  "topic_discussion": 53
+}
+Graph saved to /mnt/c/Users/ADISH GUPTA/Desktop/Layer10/outputs/graph.json
+
+============================================================
+STEP 5: Running example retrievals
+============================================================
+Building retrieval index …
+  Indexed 216 entities, 141 claims, 1988 evidence
+
+  Q: What are the most common performance issues?
+Question: What are the most common performance issues?
+
+=== Relevant Entities ===
+  [topic] performance
+  [issue] #10294: React 16 RC
+    number: 10294
+    state: closed
+    html_url: https://github.com/facebook/react/issues/10294
+  [issue] #140: Allow custom (nonstandard) attributes.
+    number: 140
+    state: closed
+    html_url: https://github.com/facebook/react/issues/140
+  [issue] #11940: Facebook Engineers - Thank You For 2017
+    number: 11940
+    state: closed
+    html_url: https://githu
+
+  Q: Who are the most active contributors?
+Question: Who are the most active contributors?
+
+=== Relevant Entities ===
+  [issue] #10294: React 16 RC
+    number: 10294
+    state: closed
+    html_url: https://github.com/facebook/react/issues/10294
+  [pull_request] #10783: Add Fragment as a named export to React
+    number: 10783
+    state: closed
+    html_url: https://github.com/facebook/react/pull/10783
+  [issue] #11299: Express more tests via public API
+    number: 11299
+    state: closed
+    html_url: https://github.com/facebook/react/is
+
+  Q: What decisions were made about hooks?
+Question: What decisions were made about hooks?
+
+=== Relevant Entities ===
+  [label] Component: Hooks
+    description: 
+  [issue] #13991: Hooks + multiple instances of React
+    number: 13991
+    state: open
+    html_url: https://github.com/facebook/react/issues/13991
+  [issue] #14110: Provide more ways to bail out inside Hooks
+    number: 14110
+    state: closed
+    html_url: https://github.com/facebook/react/issues/14110
+  [issue] #10294: React 16 RC
+    number: 10294
+    state: closed
+    htm
+
+  Q: What bug reports are related to rendering?
+Question: What bug reports are related to rendering?
+
+=== Relevant Entities ===
+  [topic] bug
+  [label] Component: Server Rendering
+    description: None
+  [issue] #1739: Support asynchronous server rendering (waiting for data before rendering)
+    number: 1739
+    state: open
+    html_url: https://github.com/facebook/react/issues/1739
+  [pull_request] #7964: [New Docs] Added: Lists & Conditional Rendering & Forms
+    number: 7964
+    state: closed
+    html_url: https://github.com/facebook/react
+
+  Q: What components have had the most discussion?
+Question: What components have had the most discussion?
+
+=== Relevant Entities ===
+  [label] Type: Discussion
+    description: None
+  [issue] #2127: Add fragment API to allow returning multiple components from render
+    number: 2127
+    state: closed
+    html_url: https://github.com/facebook/react/issues/2127
+  [issue] #10294: React 16 RC
+    number: 10294
+    state: closed
+    html_url: https://github.com/facebook/react/issues/10294
+  [pull_request] #10783: Add Fragment as a named export to Re
+
+  Example context packs saved to /mnt/c/Users/ADISH GUPTA/Desktop/Layer10/outputs/example_context_packs.json
+
+============================================================
+Pipeline complete!
+  Outputs: /mnt/c/Users/ADISH GUPTA/Desktop/Layer10/outputs
+  Database: /mnt/c/Users/ADISH GUPTA/Desktop/Layer10/outputs/memory.db
+  Graph JSON: /mnt/c/Users/ADISH GUPTA/Desktop/Layer10/outputs/graph.json
+  Examples: /mnt/c/Users/ADISH GUPTA/Desktop/Layer10/outputs/example_context_packs.json

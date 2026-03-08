@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layer10 Memory Graph Explorer</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!-- Header -->
+        <header id="header">
+            <div class="header-left">
+                <h1>Memory Graph Explorer</h1>
+                <span class="subtitle" id="stats-badge">Loading…</span>
+            </div>
+            <div class="header-right">
+                <input type="text" id="search-input" placeholder="Ask a question or search…" />
+                <button id="search-btn" onclick="doSearch()">Search</button>
+            </div>
+        </header>
+        <!-- Main layout -->
+        <div id="main">
+            <!-- Left: Filters -->
+            <aside id="sidebar">
+                <h3>Filters</h3>
+                <div class="filter-group">
+                    <label>Entity Types</label>
+                    <div id="entity-type-filters"></div>
+                </div>
+                <div class="filter-group">
+                    <label>Confidence</label>
+                    <input type="range" id="confidence-slider" min="0" max="100" value="0" />
+                    <span id="confidence-value">0%</span>
+                </div>
+                <div class="filter-group">
+                    <label>Show Historical</label>
+                    <input type="checkbox" id="show-historical" />
+                </div>
+                <div class="filter-group">
+                    <button onclick="resetFilters()">Reset Filters</button>
+                </div>
+                <h3>Merge Log</h3>
+                <div id="merge-list" class="scrollable-list"></div>
+            </aside>
+            <!-- Center: Graph -->
+            <div id="graph-container">
+                <div id="graph-canvas"></div>
+            </div>
+            <!-- Right: Detail panel -->
+            <aside id="detail-panel">
+                <div id="detail-placeholder">
+                    <p>Click a node or edge to inspect details.</p>
+                    <p>Use the search bar to find entities, claims, and evidence.</p>
+                </div>
+                <div id="detail-content" style="display:none;">
+                    <h3 id="detail-title"></h3>
+                    <div id="detail-type" class="badge"></div>
+                    <div id="detail-properties"></div>
+                    <h4>Claims</h4>
+                    <div id="detail-claims" class="scrollable-list"></div>
+                    <h4>Evidence</h4>
+                    <div id="detail-evidence" class="scrollable-list"></div>
+                    <h4>Neighbors</h4>
+                    <div id="detail-neighbors" class="scrollable-list"></div>
+                </div>
+                <!-- Search results -->
+                <div id="search-results" style="display:none;">
+                    <h3>Search Results</h3>
+                    <div id="search-entities"></div>
+                    <div id="search-claims"></div>
+                    <div id="search-evidence"></div>
+                </div>
+            </aside>
+        </div>
+    </div>
+    <script src="/app.js"></script>
+</body>
+</html>
